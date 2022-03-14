@@ -1,0 +1,9 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "TextureSwapTrigger",
+			"Value": 1
+		}
+	]
+}
