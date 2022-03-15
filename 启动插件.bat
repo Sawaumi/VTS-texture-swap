@@ -1,2 +1,2 @@
-python example.py
+python VtextureSwap.py
 @pause
