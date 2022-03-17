@@ -10,19 +10,19 @@ from nameSwap import swap
 ###########################################
 #          texture path settings          #
 ###########################################
-# 请将单引号中的内容改为您模型贴图文件夹的绝对路径
-# 例如下一行注释，格式为 r‘路径’
+# Please replace content in <> 
+# with the absolute path for the texture folder in your model directory
+# e.g:
 # path = r'G:\SteamLibrary\steamapps\common\VTube Studio\VTube Studio_Data\StreamingAssets\Live2DModels\juzi_1123\juzi.4096'
-path = r'您模型贴图文件夹的绝对路径\末尾无空格或斜杠'
+path = r'<Absolute path for the texture folder in your model directory>'
 
-# 源贴图名称，默认为texture_00.png
 # default = 'texture_00.png'
 src_file_name = 'texture_00.png'
-# 替换贴图名称，默认为texture_00_swap.png
+
 # default = 'texture_00_swap.png'
 dst_file_name = 'texture_00_swap.png'
 
-# 临时贴图名称，默认为texture_00_temp.png
+# Swap is done by src->temp, dst->src, temp->dst
 # default = 'texture_00_temp.png'
 temp_file_name = 'texture_00_temp.png'
 # ======================================
