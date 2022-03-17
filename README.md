@@ -41,4 +41,5 @@ Email: sawaumi@foxmail.com
 Discord: Shamil_Saw#1756
 Twitter: @Juzi_Saw
 
-#### Huge thanks to emlo40's frame work: https://github.com/mlo40/VsPyYt
+#### Frame work from: emlo40's VsPyYt: https://github.com/mlo40/VsPyYt
+Huge thanks to emlo40 :D
