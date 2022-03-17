@@ -40,3 +40,5 @@ VTS will ask for permission to establish connection, please allow.<br/>
 Email: sawaumi@foxmail.com 
 Discord: Shamil_Saw#1756
 Twitter: @Juzi_Saw
+
+#### Huge thanks to emlo40's frame work: https://github.com/mlo40/VsPyYt
