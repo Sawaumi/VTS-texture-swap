@@ -1,2 +1,0 @@
-python VtextureSwap.py
-@pause
