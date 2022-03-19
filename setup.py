@@ -1,6 +1,5 @@
 import os
 import json
-import configparser
 
 import asyncio
 import websockets
@@ -17,6 +16,10 @@ except Exception as e_import_winreg:
 """
 Huge thanks to emlo40's frame work: https://github.com/mlo40/VsPyYt
 """
+
+motions = ["motions/removeHair.exp3.json",
+           "motions/tintTexture.exp3.json",
+           "motions/textureSwap.exp3.json"]
 
 
 async def setup(ws):
@@ -55,9 +58,9 @@ async def setup(ws):
             json_file.close()
         await authorize(ws, auth_token)
 
-    if os.path.exists('textures.json'):
+    if os.path.exists('path.json'):
         print('Loading texture path From File...')
-        # with open('textures.json', "r") as json_file:
+        # with open('path.json', "r") as json_file:
         #     data = json.load(json_file)
         #     base_path = data["basePath"]
         #     json_file.close()
@@ -102,7 +105,7 @@ async def setup(ws):
                 replace .png -> temp.png = temp_path
                 '''
                 print('Saving path for future Use...')
-                with open('textures.json', "w") as json_file:
+                with open('path.json', "w") as json_file:
                     json_file_con = {
                         "basePath": model_folder_path,
                         "textureArray": textures
@@ -114,6 +117,28 @@ async def setup(ws):
         except Exception as e_get_key:
             print(e_get_key)
 
+    print('Checking exp3 files...')
+    with open('path.json', "r") as json_file:
+        data = json.load(json_file)
+        base_path = data["basePath"]
+        json_file.close()
+    # remove_hair_exp = (base_path + motions[0])
+    # print(remove_hair_exp)
+    motion_found = True
+    for motion in motions:
+        motion_path = base_path + motion
+        if not os.path.exists(motion_path):
+            motion_found = False
+            print(motion, "not exist, creating file...")
+            with open(motion_path, "w") as json_file:
+                json_file_con = {
+                    "Type": "Live2D Expression",
+                    "Parameters": []
+                }
+                json_file.write(json.dumps(json_file_con))
+                json_file.close()
+    if motion_found:
+        print("All exp3 files found, please bind as your need")
     # load token
     with open('token.json') as json_file:
         data = json.load(json_file)
