@@ -19,7 +19,7 @@ async def main():
         quit()
     await setup(ws)
 
-    with open('textures.json', "r") as json_file:
+    with open('path.json', "r") as json_file:
         data = json.load(json_file)
         base_path = data["basePath"]
         textures = data["textureArray"]
