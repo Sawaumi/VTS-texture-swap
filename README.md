@@ -1,4 +1,4 @@
-# VtextureSwap
+# VTS-texture-swap
 
 A VTubeStudio(VTS) plugin for live2d model texture swapping by hotkeys
 
